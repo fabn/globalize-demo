@@ -7,4 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create an user
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') rescue nil
+
+# Recreate article table
+Article.delete_all
+1.upto(3) do |i|
+# Create a couple of articles
+  Article.create!(translations_attributes: [
+      {locale: :en, title: "Engilsh ##{i} title", body: "English ##{i} body"},
+      {locale: :it, title: "Italian ##{i} title", body: "Italian ##{i} body"},
+      {locale: :de, title: "German ##{i} title", body: "German ##{i} body"},
+      {locale: :hu, title: "Hungarian ##{i} title", body: "Hungarian ##{i} body"},
+      {locale: :'pt-PT', title: "Portuguese ##{i} title", body: "Portuguese ##{i} body"},
+      {locale: :'pt-BR', title: "Brazilian ##{i} title", body: "Brazilian ##{i} body"},
+  ])
+end

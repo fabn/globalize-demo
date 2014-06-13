@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.18'
 
 # Used for heroku deployments
@@ -30,5 +32,6 @@ gem 'activeadmin-globalize', github: 'fabn/activeadmin-globalize', branch: :deve
 
 gem 'sqlite3', group: :development
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Gems for heroku deployment
+gem 'unicorn'
+gem 'newrelic_rpm'

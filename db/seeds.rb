@@ -22,3 +22,9 @@ Article.delete_all
       {locale: :'pt-BR', title: "Brazilian ##{i} title", body: "Brazilian ##{i} body"},
   ])
 end
+
+# Article with a couple of empty fields
+Article.create!(translations_attributes: [
+    {locale: :en, title: 'With empty title', body: 'With empty body'},
+    {locale: :it},
+])

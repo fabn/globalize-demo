@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fabn/activeadmin-globalize.git
-  revision: d9d7cd4329cf2f1f2d140686a0001db6a1b5ec5a
+  revision: 894c778fe76dd138355ed12b3022a795e07d7ab3
   branch: develop
   specs:
     activeadmin-globalize (0.6.3)
